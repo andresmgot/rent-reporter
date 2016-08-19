@@ -1,0 +1,14 @@
+{
+  "name": "sevilla-flat-searcher",
+  "version": "1.0.0",
+  "description": "To remote sync through ssh",
+  "main": "index.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "lodash": "^4.13.1",
+    "sqlite3": "^3.1.4"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
