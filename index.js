@@ -52,6 +52,10 @@ db.run('CREATE TABLE results (domain string, url string, found string)', functio
 
 const main = function(callback) {
   const c = {counter: 0, refs: 0, webs: 0, results: []};
+  const check = spawnSync('casperjs', ['--version'])
+  if (check.status !== 0) {
+    throw new Error("Unable to use casperjs:\n" + check.stdout)
+  }
   _.each(webpages, web => {
     const webObj = {
       baseUrl: web.match(/^(https?:\/\/[^\/]*)/m)[1],
